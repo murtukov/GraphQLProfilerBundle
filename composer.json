@@ -10,8 +10,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Overblog\\GraphQLProfiler\\": "src/",
-            "Overblog\\GraphQLProfiler\\Tests\\": "tests/"
+            "Overblog\\GraphQLProfilerBundle\\": "src/",
+            "Overblog\\GraphQLProfilerBundle\\Tests\\": "tests/"
         }
     },
     "license": "MIT"

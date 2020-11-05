@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQLProfiler\Tests\Request;
+namespace Overblog\GraphQLProfilerBundle\Tests\Request;
 
 use GraphQL\Executor\Promise\Adapter\ReactPromiseAdapter;
 use GraphQL\Type\Schema;

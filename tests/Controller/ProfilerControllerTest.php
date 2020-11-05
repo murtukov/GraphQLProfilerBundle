@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQLProfiler\Tests\Controller;
+namespace Overblog\GraphQLProfilerBundle\Tests\Controller;
 
 use GraphQL\Type\Schema;
 use Overblog\GraphQLBundle\Controller\ProfilerController;

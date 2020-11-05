@@ -1,0 +1,18 @@
+{
+    "name": "overblog/graphql-profiler",
+    "description": "The Profiler module for overblog/graphql-bundle",
+    "type": "symfony-bundle",
+    "require-dev": {
+        "overblog/graphql-bundle": "dev-master",
+        "twig/twig": "^2.10|^3.0",
+        "symfony/var-dumper": "^4.4 || ^5.0",
+        "symfony/profiler-pack": "^4.4 || ^5.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Overblog\\GraphQLProfiler\\": "src/",
+            "Overblog\\GraphQLProfiler\\Tests\\": "tests/"
+        }
+    },
+    "license": "MIT"
+}

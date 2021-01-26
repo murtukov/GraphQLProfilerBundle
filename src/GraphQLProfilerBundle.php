@@ -6,7 +6,7 @@ namespace Overblog\GraphQL\ProfilerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class OverblogProfilerBundle extends Bundle
+class GraphQLProfilerBundle extends Bundle
 {
 
 }

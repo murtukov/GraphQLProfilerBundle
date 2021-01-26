@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Overblog\GraphQL\ProfilerBundle\Tests\Controller;
 
 use GraphQL\Type\Schema;
-use Overblog\GraphQLBundle\Controller\ProfilerController;
+use Overblog\GraphQL\ProfilerBundle\Controller\ProfilerController;
 use Overblog\GraphQLBundle\Request\Executor;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
@@ -51,25 +51,8 @@ class ProfilerControllerTest extends TestCase
     {
         return $this->getMockBuilder(Profiler::class)
             ->disableOriginalConstructor()
-            ->onlyMethods(['disable', 'loadProfile', 'find'])->getMock();
-    }
-
-    public function testInvokeWithoutProfiler(): void
-    {
-        $controller = new ProfilerController(null, null, $this->getMockRouter(), $this->getMockExecutor(false), null);
-
-        $this->expectException(ServiceNotFoundException::class);
-        $this->expectExceptionMessage('The profiler must be enabled.');
-        $controller->__invoke(new Request(), 'token');
-    }
-
-    public function testInvokeWithoutTwig(): void
-    {
-        $controller = new ProfilerController($this->getMockProfiler(), null, $this->getMockRouter(), $this->getMockExecutor(false), null);
-
-        $this->expectException(ServiceNotFoundException::class);
-        $this->expectExceptionMessage('The GraphQL Profiler require twig');
-        $controller->__invoke(new Request(), 'token');
+            ->onlyMethods(['disable', 'loadProfile', 'find'])
+            ->getMock();
     }
 
     public function testWithToken(): void
@@ -84,7 +67,8 @@ class ProfilerControllerTest extends TestCase
         /** @var MockObject $profilerMock */
         $profilerMock->expects($this->once())->method('disable');
         $profilerMock->expects($this->once())->method('find')->willReturn([['token' => 'token']]);
-        $profileMock = $this->getMockBuilder(Profile::class)->disableOriginalConstructor()->onlyMethods(['getCollector'])->getMock();
+        $profileMock = $this->getMockBuilder(Profile::class)->disableOriginalConstructor()->onlyMethods(['hasCollector', 'getCollector'])->getMock();
+        $profileMock->expects($this->once())->method('hasCollector')->willReturn(true);
         $profileMock->expects($this->once())->method('getCollector')->willReturn($graphqlData);
 
         $profilerMock->expects($this->exactly(2))->method('loadProfile')->willReturn($profileMock);

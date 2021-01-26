@@ -59,7 +59,7 @@ class ProfilerController
             $schemas[$schemaName] = SchemaPrinter::doPrint($this->requestExecutor->getSchema($schemaName));
         }
 
-        return new Response($this->twig->render('@OverblogGraphQL/profiler/graphql.html.twig', [
+        return new Response($this->twig->render('@GraphQLProfiler/profiler/graphql.html.twig', [
             'request' => $request,
             'profile' => $profile,
             'tokens' => array_filter($tokens),

@@ -1,5 +1,5 @@
 services:
-    Overblog\GraphQLProfiler\Controller\ProfilerController:
+    Overblog\GraphQL\ProfilerBundle\Controller\ProfilerController:
         public: true
         arguments:
             - "@profiler"
@@ -8,7 +8,7 @@ services:
             - '@Overblog\GraphQLBundle\Request\Executor'
             - "%overblog_graphql_profiler.query_match%"
 
-    Overblog\GraphQLBundle\DataCollector\GraphQLCollector:
+    Overblog\GraphQL\ProfilerBundle\DataCollector\GraphQLCollector:
         public: false
         tags:
             - name: data_collector

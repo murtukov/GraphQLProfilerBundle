@@ -12,7 +12,7 @@ services:
         public: false
         tags:
             - name: data_collector
-              template: "@OverblogGraphQL/profiler/panel.html.twig"
+              template: "@GraphQLProfiler/profiler/panel.html.twig"
               id: graphql
             - name: kernel.event_listener
               event: graphql.post_executor

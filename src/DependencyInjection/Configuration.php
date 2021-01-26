@@ -9,9 +9,11 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
+    public const NAME = 'overblog_graphql_profiler';
+
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('overblog_graphql_profiler');
+        $treeBuilder = new TreeBuilder(self::NAME);
 
         // @phpstan-ignore-next-line
         $treeBuilder->getRootNode()

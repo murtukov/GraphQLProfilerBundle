@@ -16,4 +16,9 @@ class GraphQLProfilerExtension extends Extension
 
         $container->setParameter($this->getAlias().'.query_match', $config['query_match']);
     }
+
+    public function getAlias()
+    {
+        return Configuration::NAME;
+    }
 }

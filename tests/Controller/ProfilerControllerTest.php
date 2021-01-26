@@ -9,7 +9,6 @@ use Overblog\GraphQL\ProfilerBundle\Controller\ProfilerController;
 use Overblog\GraphQLBundle\Request\Executor;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 use Symfony\Component\HttpKernel\Profiler\Profiler;

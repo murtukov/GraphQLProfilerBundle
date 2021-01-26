@@ -6,7 +6,7 @@ services:
             - "@twig"
             - "@router"
             - '@Overblog\GraphQLBundle\Request\Executor'
-            - "%overblog_graphql.profiler.query_match%"
+            - "%overblog_graphql_profiler.query_match%"
 
     Overblog\GraphQLBundle\DataCollector\GraphQLCollector:
         public: false

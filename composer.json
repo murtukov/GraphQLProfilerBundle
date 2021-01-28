@@ -11,12 +11,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Overblog\\GraphQL\\ProfilerBundle\\": "src/"
+            "Overblog\\GraphQL\\Bundle\\ProfilerBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Overblog\\GraphQL\\ProfilerBundle\\Tests\\": "tests/"
+            "Overblog\\GraphQL\\Bundle\\ProfilerBundle\\Tests\\": "tests/"
         }
     },
     "license": "MIT",

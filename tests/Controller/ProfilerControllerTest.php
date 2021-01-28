@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\ProfilerBundle\Tests\Controller;
+namespace Overblog\GraphQL\Bundle\ProfilerBundle\Tests\Controller;
 
 use GraphQL\Type\Schema;
-use Overblog\GraphQL\ProfilerBundle\Controller\ProfilerController;
+use Overblog\GraphQL\Bundle\ProfilerBundle\Controller\ProfilerController;
 use Overblog\GraphQLBundle\Request\Executor;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
@@ -73,7 +73,7 @@ class ProfilerControllerTest extends TestCase
         $profilerMock->expects($this->exactly(2))->method('loadProfile')->willReturn($profileMock);
 
         $request = new Request();
-        $twigMock->expects($this->once())->method('render')->with('@OverblogGraphQL/profiler/graphql.html.twig', [
+        $twigMock->expects($this->once())->method('render')->with('@GraphQLProfiler/graphql.html.twig', [
             'request' => $request,
             'profile' => $profileMock,
             'tokens' => [['token' => 'token', 'graphql' => $graphqlData]],

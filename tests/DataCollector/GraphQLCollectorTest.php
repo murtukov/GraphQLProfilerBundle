@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\ProfilerBundle\Tests\DataCollector;
+namespace Overblog\GraphQL\Bundle\ProfilerBundle\Tests\DataCollector;
 
 use ArrayObject;
 use GraphQL\Executor\ExecutionResult;

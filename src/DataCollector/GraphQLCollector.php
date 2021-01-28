@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\ProfilerBundle\DataCollector;
+namespace Overblog\GraphQL\Bundle\ProfilerBundle\DataCollector;
 
 use GraphQL\Error\SyntaxError;
 use GraphQL\Language\AST\DocumentNode;

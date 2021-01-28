@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\ProfilerBundle\Controller;
+namespace Overblog\GraphQL\Bundle\ProfilerBundle\Controller;
 
 use GraphQL\Utils\SchemaPrinter;
 use Overblog\GraphQLBundle\Request\Executor as RequestExecutor;

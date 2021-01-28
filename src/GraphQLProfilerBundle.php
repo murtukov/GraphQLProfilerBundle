@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\ProfilerBundle;
+namespace Overblog\GraphQL\Bundle\ProfilerBundle;
 
-use Overblog\GraphQL\ProfilerBundle\DependencyInjection\GraphQLProfilerExtension;
+use Overblog\GraphQL\Bundle\ProfilerBundle\DependencyInjection\GraphQLProfilerExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
